@@ -6,9 +6,8 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import AddIcon from '@mui/icons-material/Add';
-import SoftWare from './moduls/SoftWare';
-import Autocomplete from '@mui/material/Autocomplete';
+import ListItem from './ListItem'
+//import AddIcon from '@mui/icons-material/Add';
 const useStyles = makeStyles((theme) => ({
     paper: {
         marginTop: theme.spacing(8),
@@ -29,8 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SignIn() {
-    const [softwareArr, setSoftwareArr] = useState(["a","s"])
+export default function SignIn(props) {
     const classes = useStyles();
 
     return (
@@ -38,7 +36,7 @@ export default function SignIn() {
             <CssBaseline />
             <div className={classes.paper}>
                 <Avatar className={classes.avatar}>
-                    <AddIcon />
+                    {/* <AddIcon /> */}
                 </Avatar>
                 <Typography component="h1" variant="h5">
                     הוספת קורס
@@ -58,15 +56,12 @@ export default function SignIn() {
                     <Typography style={{ textAlign: 'center' }}>
                         הוספת תוכנות לקורס
                     </Typography>
-                    <Autocomplete
-                        disablePortal
-                        id="combo-box-demo"
-                       options={softwareArr}
-                        sx={{ width: 300 }}
-                        renderInput={(params) => (
-                            <TextField {...params}  variant="standard" />)}
-                    />
-                    
+                    <ul>
+                        {props.softwareArr.map((item) =>
+                            <ListItem key={item.SoftWareId}
+                                value={item.SoftWareName} />
+                        )}
+                    </ul>
                     <Button
                         type="submit"
                         fullWidth
@@ -82,3 +77,4 @@ export default function SignIn() {
         </Container>
     );
 }
+
