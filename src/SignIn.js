@@ -43,7 +43,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          התחברות
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -52,7 +52,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="כתובת אי-מייל"
             name="email"
             autoComplete="email"
             autoFocus
@@ -63,14 +63,14 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="סיסמא"
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label="זכור אותי"
           />
           <Button
             type="submit"
@@ -79,10 +79,10 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            התחבר
           </Button>
               <Link href="#" variant="body2">
-                Forgot password?
+                שכחת סיסמא?
               </Link>
         </form>
       </div>

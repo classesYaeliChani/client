@@ -6,7 +6,8 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import AddIcon from '@mui/icons-material/Add';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -26,16 +27,15 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
-
+ 
 export default function SignIn() {
   const classes = useStyles();
-
+ 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
-          <AddIcon/>
         </Avatar>
         <Typography component="h1" variant="h5">
          הוספת קבוצה
@@ -63,6 +63,11 @@ export default function SignIn() {
             autoComplete="numOfPupils"
             autoFocus
           />
+          
+          <FormControlLabel
+          control={<Switch   name="gilad" />}
+          label="סטטוס קבוצה"
+        />
           <Button
             type="submit"
             fullWidth

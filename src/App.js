@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-//import ResponsiveAppBar from './AppBar'
-//import SignIn from './SignIn'
-//import AddGroup from './AddGroup'
-import AddCourse from './AddCourse'
+//import AppBar from './AppBar'
+import SignIn from './SignIn'
+import AddGroup from './AddGroup'
+//import AddCourse from './AddCourse'
+//import CheckboxesTags from './AddRoom'
 
 function App() {
  const softwareArr=[
@@ -15,9 +16,11 @@ function App() {
    {SoftWareId:2,SoftWareName:"ssms"},
  ]
   return (<>
-{/* <ResponsiveAppBar/> 
- <AddGroup/> */}
-<AddCourse softwareArr={softwareArr}/> 
+ {/* <AppBar/>  */}
+ <SignIn/>
+{/* <AddCourse softwareArr={softwareArr}/>  */}
+<AddGroup/>
+<CheckboxesTags/>
 </>
   );
 }
