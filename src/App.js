@@ -20,7 +20,7 @@ function App() {
  <SignIn/>
 {/* <AddCourse softwareArr={softwareArr}/>  */}
 <AddGroup/>
-<CheckboxesTags/>
+{/* <CheckboxesTags/> */}
 </>
   );
 }
