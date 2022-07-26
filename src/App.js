@@ -6,6 +6,7 @@ import AddGroup from './AddGroup'
 import AddCourse from './AddCourse'
 import AddSoftware from './AddSoftWare'
 import AddRoom from './AddRoom'
+import NestedList from './RemoveRoom'
 function App() {
  const softwareArr=[
    {SoftWareId:1,SoftWareName:"visual studio"},
@@ -22,6 +23,7 @@ function App() {
 <AddGroup/>
 <AddSoftware/>
 <AddRoom/>
+<NestedList/>
 </>
   );
 }
