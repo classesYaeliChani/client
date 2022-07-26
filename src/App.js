@@ -4,8 +4,8 @@ import AppBar from './AppBar'
 import SignIn from './SignIn'
 import AddGroup from './AddGroup'
 import AddCourse from './AddCourse'
-import CheckboxesTags from './AddRoom'
-
+import AddSoftware from './AddSoftWare'
+import AddRoom from './AddRoom'
 function App() {
  const softwareArr=[
    {SoftWareId:1,SoftWareName:"visual studio"},
@@ -20,7 +20,8 @@ function App() {
  <SignIn/>
 <AddCourse softwareArr={softwareArr}/> 
 <AddGroup/>
-<CheckboxesTags/>
+<AddSoftware/>
+<AddRoom/>
 </>
   );
 }
